@@ -1,0 +1,86 @@
+ELMD - Embeddings Language Modeling (Allen AI)
+
+2 BI-LSTM
+
+1024 Vectors
+
+512 Max Length (100 - maxlenght 400)
+
+4 outputs -> Default , Lstm, Lstm 2, ELMO, word
+
+special tokens <s> <unk> </a>
+
+Loss Negative Log Likelihood - Adam Optimization
+
+
+
+tf_hub (3dimension outpua) -> number of sentencea, number of words (max), vector
+
+no attentions here
+Original (360MB) 	weights	options	93.6M Parameters 	4096 Hidlen layers /512	 2	84.63	93.85
+{"lstm": {"use_skip_connections": true, "projection_dim": 512, "cell_clip": 3, "proj_clip": 3, "dim": 4096, "n_layers": 2}, "char_cnn": {"activation": "relu", "filters": [[1, 32], [2, 32], [3, 64], [4, 128], [5, 256], [6, 512], [7, 1024]], "n_highway": 2, "embedding": {"dim": 16}, "n_characters": 262, "max_characters_per_token": 50}}
+
+`````````````````````````````````````````````````````````````````````````````
+
+GPT / vs 2 and 3
+
+GPT - Generative Pre Trained (Open AT)
+
+Unidirectional
+
+Transformer - Decoder (6)
+
+Next word prediction <looks words to its left and predicts the right
+
+NLG (Q A) can be done
+
+Crosss entrophy
+
+hugging faces 
+self attention
+
+
+```````````````````````````````````````````````````````````````````````````````````
+
+BERT - Bid Enc Rep from Trained (Google)
+
+Transformer- Encoder (12)
+
+768 Vector Embedding length
+
+512 Max length -  Self Attention
+
+<CLS> like to learn Mathematics <MASK> Mrs. Doolittle from Stanford. <SEP>She is good at physics. <SEP>Animals are becoming extinct. 
+
+WE + PE + SE -> MIM + NSP
+
+MASK -> 15% of tokens
+
+	80% be replaced with MASE
+
+	10% be replaced with wrong text
+
+	10% be left untouched
+
+Self -Attention - Q K V  
+NLG (Q&A) cant be done
+
+Loss Categorical_cross_entropy which can be calculated from KL DIvergence) / SparseCategoricalCrossentropy
+
+hugging faces 
+
+BERT-Large, Uncased (Whole Word Masking): 24-layer, 1024-hidden, 16-heads, 340M parameters
+
+Adam Optimizer 4e-4 
+
+BERT-Base, Uncased: 12-layer, 768-hidden, 12-heads, 110M parameters
+BERT-Large, Uncased: 24-layer, 1024-hidden, 16-heads, 340M parameters
+
+390MB
+interoperability
+
+````````````````````````````````````````````
+
+XLNET (FAIR)
+
+ERNIE (BAIDU) GET 3 (openAI)
