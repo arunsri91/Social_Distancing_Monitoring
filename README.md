@@ -13,6 +13,8 @@
    * Shows how many people are at High, Low and Not at risk.
    
    To can find more about this topic in my post : [Social Distancing AI](https://medium.com/@birla.deepak26/social-distancing-ai-using-python-deep-learning-c26b20c9aa4c)
+   
+   From Deepak Birla - We made a tweak adding Speech to text engine
 
 ## Demo:
 ![Demo](./demo/social_distancing.gif)
